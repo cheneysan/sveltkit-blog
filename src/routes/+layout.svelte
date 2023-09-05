@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Transition from '$lib/components/Transition.svelte'
     import Header from './header.svelte'
     import Footer from './footer.svelte'
 
@@ -7,12 +8,16 @@
     import 'open-props/buttons'
 
     import '../app.css'
+
+    export let data
 </script>
 
 <div class="layout">
     <Header />
     <main>
-        <slot />
+        <Transition url={data.url}>
+            <slot />
+        </Transition>
     </main>
     <Footer />
 </div>
