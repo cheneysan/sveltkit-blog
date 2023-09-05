@@ -1,38 +1,26 @@
-# create-svelte
+# SvelteKit test blog
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a little personal test project for seeing what SvelteKit offers over home of the other alternatives.
 
-## Creating a project
+The project is a simple blog - which uses Markdown as the blog post format, .md files are loaded from the `./posts` 
+directory and converted to XML using mdsvex and shiki (for code highlighting)
 
-If you're seeing this, you've probably already done this step. Congrats!
+Other new (for me at least) things I'm using in this mini-project:
+* `open-props` - I wanted to see how this compares to Tailwind CSS
+* `lucide-svelte` - icons, as an alternative to Box fonts
+* `fontsource` - importing fonts in code rather than linking to Google Web Fonts
+* `mdsvex` - a preprocessor that takes Markdown and spits out HTML
+* `shiki` - add code snippet highlighting to `mdsvex`
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+The rest is my usual stack:
+* `typescript` - always better than Javascript for production code
+* `eslint` - defacto code linting
+* `prettier` - defacto code formatting
+* `vite` - my favorite project tooling for web
 
 ## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+I'm using `pnpm` for dependency management:
+1. Clone the project
+2. Run `pnpm install` from the root directory to install packages
+3. Run `pnpm run dev` to start the dev server on localhost
+4. Open `http://localhost:5173` to see the blog
